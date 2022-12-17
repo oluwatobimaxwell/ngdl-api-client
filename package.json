@@ -1,6 +1,6 @@
 {
   "name": "ngdl_api",
-  "version": "v1",
+  "version": "v1.0.1",
   "description": " This is the API document for the NGDL project. It is a work in progress and is subject to change. This documentation is provided for the purpose of testing and auditing the integrity of the platform. It is not intended for production use.<br/><br/> The API is currently in version <b>1.0.0</b>.<br/> Developed by: <b>The Boolean Technology Ltd.</b><br/> Developed for: <b>Nehemiah Grace Developer Limited</b><br/> ",
   "license": "Private License",
   "main": "dist/index.js",
