@@ -295,6 +295,47 @@ export default class PayrollsApi {
     }
 
     /**
+     * Callback function to receive the result of the payrollsPayslips operation.
+     * @callback module:api/PayrollsApi~payrollsPayslipsCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {Number} id A unique integer value identifying this payroll.
+     * @param {module:api/PayrollsApi~payrollsPayslipsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    payrollsPayslips(id, callback) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling payrollsPayslips");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Basic'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/payrolls/{id}/payslips/', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the payrollsRead operation.
      * @callback module:api/PayrollsApi~payrollsReadCallback
      * @param {String} error Error message, if any.

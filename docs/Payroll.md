@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] [readonly] 
+**summary** | **String** |  | [optional] [readonly] 
 **description** | **String** |  | [optional] 
 **createdAt** | **Date** |  | [optional] [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 

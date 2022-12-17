@@ -53,6 +53,21 @@ class Transaction {
             if (data.hasOwnProperty('logs')) {
                 obj['logs'] = ApiClient.convertToType(data['logs'], 'String');
             }
+            if (data.hasOwnProperty('category')) {
+                obj['category'] = ApiClient.convertToType(data['category'], 'String');
+            }
+            if (data.hasOwnProperty('created_by')) {
+                obj['created_by'] = ApiClient.convertToType(data['created_by'], 'String');
+            }
+            if (data.hasOwnProperty('status_by')) {
+                obj['status_by'] = ApiClient.convertToType(data['status_by'], 'String');
+            }
+            if (data.hasOwnProperty('approved_by')) {
+                obj['approved_by'] = ApiClient.convertToType(data['approved_by'], 'String');
+            }
+            if (data.hasOwnProperty('related_items')) {
+                obj['related_items'] = ApiClient.convertToType(data['related_items'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -86,18 +101,6 @@ class Transaction {
             if (data.hasOwnProperty('meta_data')) {
                 obj['meta_data'] = ApiClient.convertToType(data['meta_data'], Object);
             }
-            if (data.hasOwnProperty('category')) {
-                obj['category'] = ApiClient.convertToType(data['category'], 'Number');
-            }
-            if (data.hasOwnProperty('created_by')) {
-                obj['created_by'] = ApiClient.convertToType(data['created_by'], 'Number');
-            }
-            if (data.hasOwnProperty('approved_by')) {
-                obj['approved_by'] = ApiClient.convertToType(data['approved_by'], 'Number');
-            }
-            if (data.hasOwnProperty('status_by')) {
-                obj['status_by'] = ApiClient.convertToType(data['status_by'], 'Number');
-            }
             if (data.hasOwnProperty('folder')) {
                 obj['folder'] = ApiClient.convertToType(data['folder'], 'Number');
             }
@@ -114,6 +117,26 @@ class Transaction {
         // ensure the json data is a string
         if (data['logs'] && !(typeof data['logs'] === 'string' || data['logs'] instanceof String)) {
             throw new Error("Expected the field `logs` to be a primitive type in the JSON string but got " + data['logs']);
+        }
+        // ensure the json data is a string
+        if (data['category'] && !(typeof data['category'] === 'string' || data['category'] instanceof String)) {
+            throw new Error("Expected the field `category` to be a primitive type in the JSON string but got " + data['category']);
+        }
+        // ensure the json data is a string
+        if (data['created_by'] && !(typeof data['created_by'] === 'string' || data['created_by'] instanceof String)) {
+            throw new Error("Expected the field `created_by` to be a primitive type in the JSON string but got " + data['created_by']);
+        }
+        // ensure the json data is a string
+        if (data['status_by'] && !(typeof data['status_by'] === 'string' || data['status_by'] instanceof String)) {
+            throw new Error("Expected the field `status_by` to be a primitive type in the JSON string but got " + data['status_by']);
+        }
+        // ensure the json data is a string
+        if (data['approved_by'] && !(typeof data['approved_by'] === 'string' || data['approved_by'] instanceof String)) {
+            throw new Error("Expected the field `approved_by` to be a primitive type in the JSON string but got " + data['approved_by']);
+        }
+        // ensure the json data is a string
+        if (data['related_items'] && !(typeof data['related_items'] === 'string' || data['related_items'] instanceof String)) {
+            throw new Error("Expected the field `related_items` to be a primitive type in the JSON string but got " + data['related_items']);
         }
         // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
@@ -153,6 +176,31 @@ Transaction.prototype['id'] = undefined;
  * @member {String} logs
  */
 Transaction.prototype['logs'] = undefined;
+
+/**
+ * @member {String} category
+ */
+Transaction.prototype['category'] = undefined;
+
+/**
+ * @member {String} created_by
+ */
+Transaction.prototype['created_by'] = undefined;
+
+/**
+ * @member {String} status_by
+ */
+Transaction.prototype['status_by'] = undefined;
+
+/**
+ * @member {String} approved_by
+ */
+Transaction.prototype['approved_by'] = undefined;
+
+/**
+ * @member {String} related_items
+ */
+Transaction.prototype['related_items'] = undefined;
 
 /**
  * @member {String} description
@@ -208,26 +256,6 @@ Transaction.prototype['priority'] = undefined;
  * @member {Object} meta_data
  */
 Transaction.prototype['meta_data'] = undefined;
-
-/**
- * @member {Number} category
- */
-Transaction.prototype['category'] = undefined;
-
-/**
- * @member {Number} created_by
- */
-Transaction.prototype['created_by'] = undefined;
-
-/**
- * @member {Number} approved_by
- */
-Transaction.prototype['approved_by'] = undefined;
-
-/**
- * @member {Number} status_by
- */
-Transaction.prototype['status_by'] = undefined;
 
 /**
  * @member {Number} folder

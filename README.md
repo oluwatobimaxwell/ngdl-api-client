@@ -228,6 +228,7 @@ Class | Method | HTTP request | Description
 *NgdlApi.PayrollsApi* | [**payrollsDelete**](docs/PayrollsApi.md#payrollsDelete) | **DELETE** /payrolls/{id}/ | 
 *NgdlApi.PayrollsApi* | [**payrollsList**](docs/PayrollsApi.md#payrollsList) | **GET** /payrolls/ | 
 *NgdlApi.PayrollsApi* | [**payrollsPartialUpdate**](docs/PayrollsApi.md#payrollsPartialUpdate) | **PATCH** /payrolls/{id}/ | 
+*NgdlApi.PayrollsApi* | [**payrollsPayslips**](docs/PayrollsApi.md#payrollsPayslips) | **GET** /payrolls/{id}/payslips/ | 
 *NgdlApi.PayrollsApi* | [**payrollsRead**](docs/PayrollsApi.md#payrollsRead) | **GET** /payrolls/{id}/ | 
 *NgdlApi.PayrollsApi* | [**payrollsUpdate**](docs/PayrollsApi.md#payrollsUpdate) | **PUT** /payrolls/{id}/ | 
 *NgdlApi.PayslipsApi* | [**payslipsCreate**](docs/PayslipsApi.md#payslipsCreate) | **POST** /payslips/ | 

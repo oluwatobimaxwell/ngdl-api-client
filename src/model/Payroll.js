@@ -52,6 +52,9 @@ class Payroll {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
             }
+            if (data.hasOwnProperty('summary')) {
+                obj['summary'] = ApiClient.convertToType(data['summary'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -105,6 +108,10 @@ class Payroll {
             }
         }
         // ensure the json data is a string
+        if (data['summary'] && !(typeof data['summary'] === 'string' || data['summary'] instanceof String)) {
+            throw new Error("Expected the field `summary` to be a primitive type in the JSON string but got " + data['summary']);
+        }
+        // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
@@ -125,6 +132,11 @@ Payroll.RequiredProperties = ["pay_date"];
  * @member {Number} id
  */
 Payroll.prototype['id'] = undefined;
+
+/**
+ * @member {String} summary
+ */
+Payroll.prototype['summary'] = undefined;
 
 /**
  * @member {String} description
